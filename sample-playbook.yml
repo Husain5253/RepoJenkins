@@ -1,13 +1,10 @@
 ---
 - hosts: localhost
   become: true
+  remote_user: jenkins
+  connection: local
   tasks:
     - name: Creating new File
       file:
         dest: /home/devh/sample-file.txt
         state: touch
-
-    - name: Creating new Directory
-      file:
-        dest: /home/devh/sample-dir
-        state: directory

@@ -2,7 +2,6 @@
 - hosts: localhost
   become: true
   remote_user: jenkins
-  connection: local
   tasks:
     - name: Creating new File
       file:

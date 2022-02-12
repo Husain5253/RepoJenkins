@@ -1,9 +1,0 @@
----
-- hosts: localhost
-  become: true
-  connection: local
-  tasks:
-    - name: Creating new File
-      file:
-        dest: /home/devh/sample-file.txt
-        state: touch

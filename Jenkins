@@ -1,0 +1,19 @@
+pipeline{
+    
+    agent any
+    stages{
+        stage("Git Clone"){
+            steps{
+                git branch: 'main', credentialsId: '59305794-c215-4d8f-9501-1734c0f91f51', url: 'git@github.com:Husain5253/demoRepo.git' 
+            } 
+              
+        }
+        stage("Running Ansible Playbook"){
+            steps{
+                sh example-playbook.yml
+            }
+        }
+        
+    }
+    
+}

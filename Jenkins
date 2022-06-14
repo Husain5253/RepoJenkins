@@ -8,7 +8,7 @@ pipeline{
             } 
               
         }
-        stage("Running Ansible Playbook"){
+        stage("Running Ansible Example Playbook"){
             steps{
                 sh example-playbook.yml
             }
